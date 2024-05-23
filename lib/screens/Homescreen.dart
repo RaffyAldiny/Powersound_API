@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class Homescreen extends StatefulWidget {
+class gomescreen extends StatefulWidget {
   const Homescreen({super.key});
 
   @override
