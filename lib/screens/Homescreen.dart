@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class gomescreen extends StatefulWidget {
+class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
   @override
@@ -14,5 +14,4 @@ class _HomescreenState extends State<Homescreen> {
     return const Placeholder();
   }
 }
-
 
