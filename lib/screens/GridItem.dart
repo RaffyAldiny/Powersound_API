@@ -31,16 +31,26 @@ class GridItem extends StatelessWidget {
             );
           },
           child: Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(12.0),
             decoration: BoxDecoration(
-              color: Colors.blue.shade600.withOpacity(0.085),
-              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.blueAccent.shade700.withOpacity(0.12),
+              borderRadius: BorderRadius.circular(6.0),
             ),
-            child: Icon(icon, size: 36),
+            child: Icon(
+              icon,
+              size: 34,
+              color: Colors.black87.withOpacity(0.75),
+            ),
           ),
         ),
         const SizedBox(height: 10),
-        Text(label,style: const TextStyle(color: Colors.black54,letterSpacing: 0.5),),
+        Text(
+          label,
+          style: TextStyle(
+              color: Colors.black87.withOpacity(0.85),
+              letterSpacing: 0.5,
+              fontSize: 12),
+        ),
       ],
     );
   }
