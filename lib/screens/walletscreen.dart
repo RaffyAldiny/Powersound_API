@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:powersound/screens/GridItem.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,101 +27,30 @@ class _HomeScreen extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-           SingleChildScrollView(
-             scrollDirection: Axis.horizontal,
-             child: Row(
-              children: [
-                const SizedBox(width: 20),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade600,
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: () {
-                  },
-                  child: const Text('Dashboard'),
-                ),
-                const SizedBox(width: 12),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade600,
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: () {
-                  },
-                  child: const Text('Orders'),
-                ),
-                const SizedBox(width: 12),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade600,
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: () {
-                  },
-                  child: const Text('Orders'),
-                ),
-                const SizedBox(width: 12),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade600,
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: () {
-                  },
-                  child: const Text('Orders'),
-                ),
-                const SizedBox(width: 20),
-              ],
-                         ),
-           ),
           const Text(
             '₱2.00',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
+
             ),
           ),
           const Text(
             'Wallet balance',
             style: TextStyle(color: Colors.grey),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                onPressed: () {},
-                child: const Text('Auto cash in'),
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Cash in'),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Send'),
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
           GridView.count(
+            padding: const EdgeInsets.all(20),
             shrinkWrap: true,
             crossAxisCount: 3,
-            children: [
-              buildGridItem(Icons.account_balance, 'Bank transfer'),
-              buildGridItem(Icons.credit_card, 'Cards'),
-              buildGridItem(Icons.savings, 'Savings'),
-              buildGridItem(Icons.trending_up, 'Stocks'),
-              buildGridItem(Icons.phone_android, 'Load'),
-              buildGridItem(Icons.receipt, 'Bills'),
-              buildGridItem(Icons.currency_bitcoin, 'Crypto'),
-              buildGridItem(Icons.more_horiz, 'More'),
+            children: const [
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
+              GridItem(icon: Icons.add, label: "DSADAS", targetScreen: HomeScreen()),
             ],
           ),
         ],
@@ -132,10 +62,27 @@ class _HomeScreen extends State<HomeScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, size: 40),
+        InkWell(
+          splashColor: Colors.blue.shade400.withOpacity(0.15),
+          highlightColor: Colors.blueAccent.shade200.withOpacity(0.25),
+          splashFactory: InkRipple.splashFactory,
+          customBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onTap: () {
+            // Handle tap event here
+          },
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.blue.shade500.withOpacity(0.135),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: Icon(icon, size: 40),
+          ),
+        ),
         const SizedBox(height: 8),
         Text(label),
       ],
     );
-  }
-}
+  }}
