@@ -20,7 +20,7 @@ class ProductItemSummary extends StatelessWidget {
             Text(
               "Product Item",
               style: TextStyle(
-                color: Colors.black87.withOpacity(0.45),
+                color: Colors.black87.withOpacity(0.5),
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
               ),
@@ -28,7 +28,7 @@ class ProductItemSummary extends StatelessWidget {
             Text(
               "Quantity",
               style: TextStyle(
-                color: Colors.black87.withOpacity(0.45),
+                color: Colors.black87.withOpacity(0.5),
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
               ),
@@ -46,7 +46,7 @@ class ProductItemSummary extends StatelessWidget {
                   return Text(
                     line,
                     style:  TextStyle(
-                      color: Colors.black87.withOpacity(0.85),
+                      color: Colors.black87.withOpacity(0.75),
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                     ),
@@ -57,7 +57,7 @@ class ProductItemSummary extends StatelessWidget {
             Text(
               quantity,
               style:  TextStyle(
-                color: Colors.black87.withOpacity(0.85),
+                color: Colors.black87.withOpacity(0.75),
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
               ),

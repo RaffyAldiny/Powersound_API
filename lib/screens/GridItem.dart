@@ -35,6 +35,10 @@ class GridItem extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blueAccent.shade700.withOpacity(0.12),
               borderRadius: BorderRadius.circular(6.0),
+              border: Border.all(
+                color: Colors.blueAccent.shade700.withOpacity(0.15),
+                width: 0.3,
+              ),
             ),
             child: Icon(
               icon,
@@ -47,9 +51,11 @@ class GridItem extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-              color: Colors.black87.withOpacity(0.85),
+              color: Colors.black87.withOpacity(0.55),
               letterSpacing: 0.5,
-              fontSize: 12),
+              fontSize: 11,
+              fontWeight: FontWeight.w600,
+          ),
         ),
       ],
     );
