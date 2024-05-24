@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:powersound/screens/homescreen.dart';
+import 'package:powersound/screens/walletscreen.dart';
 
 void main() {
   runApp(const MyApp());

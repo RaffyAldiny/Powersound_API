@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<OnboardingPage> createState() => _OnboardingPage();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _OnboardingPage extends State<OnboardingPage> {
   late RiveAnimationController _controller;
 
   @override
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _startAnimation() async {
     print("Animation will start in 15 seconds");
-    await Future.delayed(Duration(seconds: 15)); // Delay for 15 seconds
+    await Future.delayed(const Duration(seconds: 15)); // Delay for 15 seconds
     setState(() {
       print("Activating the animation controller");
       _controller.isActive = true; // Activate the controller to start the animation
