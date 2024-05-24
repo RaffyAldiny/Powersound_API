@@ -40,10 +40,18 @@ class _HomeScreen extends State<HomeScreen> {
                       onPressed: () {},
                     ),
                   ),
+                  Text(
+                    "Powersound",
+                    style: TextStyle(
+                      color: Colors.blueAccent.shade700.withOpacity(0.85),
+                      fontSize: 26,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      color: Colors.blueAccent.shade400.withOpacity(0.06),
+                      color: Colors.blueAccent.shade700.withOpacity(0.06),
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.message_outlined),
@@ -53,7 +61,7 @@ class _HomeScreen extends State<HomeScreen> {
                   ),
                 ],
               ),
-              SizedBox(height:10),
+              const SizedBox(height:10),
               Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
